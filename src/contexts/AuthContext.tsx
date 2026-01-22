@@ -17,6 +17,7 @@ interface AuthContextType {
   signInWithGoogleCredential: (credential: string) => Promise<{ error: Error | null }>;
   signInWithGitHub: () => Promise<{ error: Error | null }>;
   signOut: () => Promise<void>;
+  updateProfilePicture: (pictureUrl: string) => void;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -154,6 +155,13 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     persistUser(null);
   };
 
+  const updateProfilePicture = (pictureUrl: string) => {
+    if (user) {
+      const updatedUser = { ...user, picture: pictureUrl };
+      persistUser(updatedUser);
+    }
+  };
+
   return (
     <AuthContext.Provider value={{
       user,
@@ -162,7 +170,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       signUpWithEmail,
       signInWithGoogleCredential,
       signInWithGitHub,
-      signOut
+      signOut,
+      updateProfilePicture
     }}>
       {children}
     </AuthContext.Provider>

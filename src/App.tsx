@@ -11,10 +11,10 @@ import {
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { GoogleOAuthProvider } from '@react-oauth/google';
-import { ellipse, square, triangle } from 'ionicons/icons';
+import { ellipse, personCircle, triangle } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
-import Tab3 from './pages/Tab3';
+import Profile from './pages/Profile';
 import Login from './pages/Login';
 import { AuthProvider } from './contexts/AuthContext';
 import PrivateRoute from './components/PrivateRoute';
@@ -62,8 +62,8 @@ const TabsContainer: React.FC = () => (
       <Route exact path="/tabs/tab2">
         <Tab2 />
       </Route>
-      <Route path="/tabs/tab3">
-        <Tab3 />
+      <Route path="/tabs/profile">
+        <Profile />
       </Route>
       <Route exact path="/tabs">
         <Redirect to="/tabs/tab1" />
@@ -78,9 +78,9 @@ const TabsContainer: React.FC = () => (
         <IonIcon aria-hidden="true" icon={ellipse} />
         <IonLabel>Tab 2</IonLabel>
       </IonTabButton>
-      <IonTabButton tab="tab3" href="/tabs/tab3">
-        <IonIcon aria-hidden="true" icon={square} />
-        <IonLabel>Tab 3</IonLabel>
+      <IonTabButton tab="profile" href="/tabs/profile">
+        <IonIcon aria-hidden="true" icon={personCircle} />
+        <IonLabel>Profile</IonLabel>
       </IonTabButton>
     </IonTabBar>
   </IonTabs>
