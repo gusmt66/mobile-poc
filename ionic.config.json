@@ -1,0 +1,7 @@
+{
+  "name": "mobile-poc",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
