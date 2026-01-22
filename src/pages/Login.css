@@ -1,0 +1,121 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.login-logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 24px;
+}
+
+.login-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.login-header p {
+  color: var(--ion-color-medium);
+  margin: 0;
+}
+
+.error-message {
+  display: block;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.error-message p {
+  margin: 0;
+  padding: 12px;
+  background: var(--ion-color-danger-tint);
+  border-radius: 8px;
+}
+
+.oauth-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.google-login-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.google-login-wrapper > div {
+  width: 100%;
+}
+
+.google-button {
+  --background: #4285f4;
+  --background-hover: #357abd;
+  --background-activated: #357abd;
+}
+
+.github-button {
+  --background: #24292e;
+  --background-hover: #1b1f23;
+  --background-activated: #1b1f23;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--ion-color-light-shade);
+}
+
+.divider span {
+  padding: 0 16px;
+  color: var(--ion-color-medium);
+  font-size: 14px;
+}
+
+ion-list {
+  margin-bottom: 16px;
+  background: transparent;
+}
+
+ion-item {
+  --background: transparent;
+  margin-bottom: 8px;
+}
+
+.email-button {
+  margin-top: 8px;
+}
+
+.toggle-auth-mode {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.toggle-link {
+  color: var(--ion-color-primary);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.toggle-link:hover {
+  text-decoration: underline;
+}
